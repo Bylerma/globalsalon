@@ -24,6 +24,7 @@ body{
 }
 
 a{color:inherit}
+code{color:var(--warn)}
 
 .container{max-width:1120px;margin:0 auto;padding:0 18px}
 
@@ -89,6 +90,17 @@ a{color:inherit}
   background: rgba(53,208,127,.12);
   border-color: rgba(53,208,127,.35);
 }
+
+.small-link{
+  font-size:12px;
+  color:var(--muted);
+  text-decoration:none;
+  border:1px solid var(--border);
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
+}
+.small-link:hover{color:var(--text)}
 
 /* Layout / Cards */
 .hero{padding:44px 0 18px}
@@ -161,6 +173,35 @@ h2{margin:0 0 12px;font-size:24px}
 
 .pad{padding:16px}
 
+/* Rates */
+.rates-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+  margin-top:12px;
+}
+@media (max-width: 920px){ .rates-grid{grid-template-columns:1fr} }
+
+.rate-card{padding:16px}
+.rate-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+.rate-head h4{margin:0}
+.rate-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 0;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+}
+.rate-row strong{color:var(--text)}
+
 /* Form */
 .form{display:grid;gap:10px;margin-top:10px}
 
@@ -186,13 +227,6 @@ textarea{min-height:110px;resize:vertical}
 }
 
 /* Contact */
-.contact-grid{margin-top:12px;display:grid;gap:10px}
-.contact-item{
-  padding:12px;
-  border-radius:14px;
-  border:1px solid var(--border);
-  background:rgba(255,255,255,.03)
-}
 .contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 
 /* Badges */
@@ -205,6 +239,13 @@ textarea{min-height:110px;resize:vertical}
   font-size:13px;
 }
 .dot{width:9px;height:9px;border-radius:999px;background:var(--ok)}
+
+/* Separator */
+.sep{
+  border:0;
+  border-top:1px solid rgba(255,255,255,.10);
+  margin:16px 0;
+}
 
 /* Footer */
 .fine{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}
